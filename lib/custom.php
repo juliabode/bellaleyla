@@ -12,7 +12,7 @@ function my_login_logo() { ?>
             background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/assets/img/logo.png);
             padding-bottom: 30px;
             width: auto;
-			background-size: 100%;
+			background-size: contain;
         }
     </style>
 
@@ -51,3 +51,11 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'service-tile-thumb', 250, 9999 ); //250 pixels wide (and unlimited height)
     add_image_size( 'member-fotos', 450, 350, true );
 }*/
+
+
+/* Hide post menu, posts can only be created/edited in anisah */
+
+function remove_menus() {
+    remove_menu_page( 'edit.php' );
+}
+add_action( 'admin_menu', 'remove_menus' );

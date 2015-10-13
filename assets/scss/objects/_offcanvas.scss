@@ -2,10 +2,6 @@
     -webkit-backface-visibility: hidden;
     width: 100%;
     overflow: hidden;
-
-    @media all and (min-width: $bp-med) {
-        padding-top: $space;
-    }
 }
 
 .inner-wrap {
